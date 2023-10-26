@@ -33,9 +33,9 @@ class ExampleBranchKeyIdSupplier implements IDynamoDbKeyBranchKeyIdSupplier {
         String tenantKeyId = key.get("partition_key").s();
 
         String branchKeyId;
-        if (tenantKeyId.equals("tenant1Id")) {
+        if ("tenant1Id".equals(tenantKeyId)) {
             branchKeyId = branchKeyIdForTenant1;
-        } else if (tenantKeyId.equals("tenant2Id")) {
+        } else if ("tenant2Id".equals(tenantKeyId)) {
             branchKeyId = branchKeyIdForTenant2;
         } else {
             throw new IllegalArgumentException("Item does not contain valid tenant ID");

@@ -64,8 +64,8 @@ public class MigrationExampleStep0 {
         SimpleClass decryptedItem = mapper.load(SimpleClass.class, "MigrationExample", sortReadValue);
 
         // Demonstrate we get the expected item back
-        assert decryptedItem.getPartitionKey().equals("MigrationExample");
-        assert decryptedItem.getAttribute1().equals("encrypt and sign me!");
+        assert "MigrationExample".equals(decryptedItem.getPartitionKey());
+        assert "encrypt and sign me!".equals(decryptedItem.getAttribute1());
     }
 
     public static void main(final String[] args) {

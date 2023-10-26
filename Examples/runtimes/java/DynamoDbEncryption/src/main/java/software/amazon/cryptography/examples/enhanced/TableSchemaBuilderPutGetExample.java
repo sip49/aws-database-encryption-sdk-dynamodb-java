@@ -192,7 +192,7 @@ public class TableSchemaBuilderPutGetExample {
             (GetItemEnhancedRequest.Builder requestBuilder) -> requestBuilder.key(key));
 
         // Demonstrate we get the original item back
-        assert decrypted.getAttribute1().equals("encrypt and sign me!");
+        assert "encrypt and sign me!".equals(decrypted.getAttribute1());
 
         // Demonstrate, without the Enhanced Client, the record is encrypted
         try (DynamoDbClient noEncryptionDdb = DynamoDbClient.builder().build()) {

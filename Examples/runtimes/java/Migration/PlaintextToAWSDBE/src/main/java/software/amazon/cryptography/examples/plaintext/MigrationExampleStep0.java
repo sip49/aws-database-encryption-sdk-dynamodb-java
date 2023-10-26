@@ -73,8 +73,8 @@ public class MigrationExampleStep0 {
         SimpleClass returnedItem = table.getItem(itemToGet);
 
         // Demonstrate we get the expected item back
-        assert returnedItem.getPartitionKey().equals("PlaintextMigrationExample");
-        assert returnedItem.getAttribute1().equals("this will be encrypted and signed");
+        assert "PlaintextMigrationExample".equals(returnedItem.getPartitionKey());
+        assert "this will be encrypted and signed".equals(returnedItem.getAttribute1());
     }
 
     public static void main(final String[] args) {

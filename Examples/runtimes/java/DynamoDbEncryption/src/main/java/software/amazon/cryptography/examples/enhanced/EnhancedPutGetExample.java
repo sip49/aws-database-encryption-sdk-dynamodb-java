@@ -152,7 +152,7 @@ public class EnhancedPutGetExample {
                 (GetItemEnhancedRequest.Builder requestBuilder) -> requestBuilder.key(key));
 
         // Demonstrate we get the original item back
-        assert result.getAttribute1().equals("encrypt and sign me!");
+        assert "encrypt and sign me!".equals(result.getAttribute1());
     }
 
     public static void main(final String[] args) {

@@ -200,9 +200,9 @@ public class WrappedRawMaterials extends AbstractRawMaterials {
   }
 
   private static String getTransformation(final String algorithm) {
-    if (algorithm.equalsIgnoreCase("RSA")) {
+    if ("RSA".equalsIgnoreCase(algorithm)) {
       return "RSA/ECB/OAEPWithSHA-256AndMGF1Padding";
-    } else if (algorithm.equalsIgnoreCase("AES")) {
+    } else if ("AES".equalsIgnoreCase(algorithm)) {
       return "AESWrap";
     } else {
       return algorithm;
